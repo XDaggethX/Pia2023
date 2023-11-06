@@ -1,13 +1,36 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>auth</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header title="Iniciar sesion"></app-header> 
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">auth</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="d-flex-center">
+    <form action="" class="outh-form">
+      <app-logo></app-logo>
+
+      <app-login-input
+      autocomplete="email"
+      type="email"
+      label="Correo"
+      icon="mail-outline"
+      ></app-login-input>
+
+      <div class="validators"></div>
+      <app-login-input
+      type="password"
+      label="Contraseña"
+      icon="Lock-closed-outline"
+      ></app-login-input>>
+
+      <div class="validators"></div>
+
+      <p routerLink="forgot-password" class="ion-text-end">¿Olvidaste la contraseña?</p>
+
+      <ion-button class="submit" expand="block" mode="ios" fill="outline">
+        Ingresar
+      </ion-button>
+
+      <ion-button routerLink="sing-up" class="ion-margin-top" expand="block" mode="ios" fill="outline">
+        Registrarse
+      </ion-button>
+      
+    </form>
+  </div>
 </ion-content>
